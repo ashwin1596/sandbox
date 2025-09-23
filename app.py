@@ -9,8 +9,10 @@ app = Flask(__name__)
 def execute_python():
     """
     Execute user-provided Python code in a secure nsjail environment.
-    :return:
+    :return: JSON response with execution result or error message.
     """
+
+    # Get user code from request
     user_code = request.json.get("script")
     if not user_code:
         return jsonify({"error": "No code provided"}), 400
