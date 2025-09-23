@@ -5,12 +5,6 @@ import json
 
 app = Flask(__name__)
 
-
-@app.route("/")
-def hello_world():
-    return "Hello, World!"
-
-
 @app.route("/execute", methods=["POST"])
 def execute_python():
     user_code = request.json.get("script")
