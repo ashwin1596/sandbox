@@ -54,7 +54,7 @@ However, deployment to **Google Cloud Run** is not possible due to the following
 This happens because **nsjail** depends on privileged kernel operations (namespace creation, mount operations), which are blocked by Cloud Run’s managed sandbox (gVisor/Gen-2). Since Cloud Run does not allow privileged containers, nsjail cannot start the jailed process, leading to the failure.
 
 ## Screenshots
-![Numpy](NumpyRandomMatrixandSum.png)  
+![Numpy](NumpyRandomMatrixAndSum.png)  
 *Figure 1: Generating a random NumPy matrix and computing the sum*  
 
 &nbsp;  
