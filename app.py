@@ -7,6 +7,10 @@ app = Flask(__name__)
 
 @app.route("/execute", methods=["POST"])
 def execute_python():
+    """
+    Execute user-provided Python code in a secure nsjail environment.
+    :return:
+    """
     user_code = request.json.get("script")
     if not user_code:
         return jsonify({"error": "No code provided"}), 400
